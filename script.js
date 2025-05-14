@@ -77,7 +77,18 @@ function kirimWA(isQR) {
       alert("Silakan upload bukti pembayaran terlebih dahulu.");
       return;
     }
-    pesan += " Saya sudah bayar via QR dan melampirkan bukti pembayaran.";
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      // Simpan data gambar ke localStorage (sementara)
+      localStorage.setItem('buktiBayarData', event.target.result);
+      
+      pesan += " Saya sudah bayar via QR dan melampirkan bukti pembayaran.";
+      
+      // Buka halaman perantara untuk mengirim gambar
+      const encodedPesan = encodeURIComponent(pesan);
+      window.open(`send-image.html?pesan=${encodedPesan}`, "_blank");
+    };
+    reader.readAsDataURL(bukti);
   } else {
     pesan += " Saya akan membayar secara cash.";
   }
