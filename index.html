@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toko Cheese Roll & Kebab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Toko Cheese Roll & Kebab</h1>
+  </header>
+
+  <main class="container">
+    <!-- CHEESE ROLL -->
+    <section class="CHEESE-ROLL">
+      <img src="Banana Roll Cheese Choco nd Greentea Oreo.png" alt="Cheese Roll" />
+      <h2>Cheese Roll</h2>
+      <p>Harga: <strong>Rp6.000</strong></p>
+      <button onclick="pesan('Cheese Roll')">Pesan Sekarang</button>
+    </section>
+
+    <!-- KEBAB -->
+    <section class="product-card">
+      <img src="kebab.png" alt="Kebab" />
+      <h2>Kebab</h2>
+      <p>Harga: <strong>Rp7.500</strong></p>
+      <button onclick="pesan('Kebab')">Pesan Sekarang</button>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="tutupModal()">&times;</span>
+      <h3 id="judulModal"></h3>
+
+      <label for="varian">Pilih Varian Rasa:</label>
+      <select id="varian"></select>
+
+      <label for="jumlah">Jumlah:</label>
+      <input type="number" id="jumlah" min="1" value="1" />
+
+      <!-- Topping (Hanya untuk Cheese Roll) -->
+      <div id="toping-section" class="hidden">
+        <label for="toping">Pilih Topping:</label>
+        <select id="toping">
+          <option value="Springkle">Springkle</option>
+          <option value="Oreo">Oreo</option>
+          <option value="Keju">Keju</option>
+        </select>
+      </div>
+
+      <div id="pembayaran" class="hidden">
+        <p><strong>Metode Pembayaran:</strong></p>
+        <button onclick="pembayaran('cash')">Cash</button>
+        <button onclick="pembayaran('qr')">Scan QR Dana</button>
+      </div>
+
+      <div id="qr-section" class="hidden">
+        <p>Silakan scan QR dan upload bukti:</p>
+        <img src="dana.jpg" alt="QR Code" style="max-width:200px" />
+        <input type="file" id="buktiBayar" accept="image/*" />
+        <button onclick="kirimWA(true)">Kirim ke WhatsApp</button>
+      </div>
+
+      <div id="cash-section" class="hidden">
+        <button onclick="kirimWA(false)">Kirim ke WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
