@@ -12,6 +12,21 @@ header {
   padding: 1em;
 }
 
+.deskripsi-toko{
+  color: black;
+  padding: 1em;
+}
+
+.deskripsi-toko h2{
+  text-align: center;
+}
+
+.Katalog{
+  color: black;
+  text-align: center;
+  padding: 1px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -101,3 +116,30 @@ button:hover {
   cursor: pointer;
   font-size: 20px;
 }
+
+.jam h2 {
+  text-align: center;
+}
+
+ .menu {
+      margin-bottom: 20px;
+    }
+
+    .menu h3 {
+      color: #d35400;
+      border-bottom: 2px solid #f5cba7;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
