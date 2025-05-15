@@ -72,23 +72,8 @@ function kirimWA(isQR) {
   }
 
   if (isQR) {
-    const bukti = document.getElementById("buktiBayar").files[0];
-    if (!bukti) {
-      alert("Silakan upload bukti pembayaran terlebih dahulu.");
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      // Simpan data gambar ke localStorage (sementara)
-      localStorage.setItem('buktiBayarData', event.target.result);
-      
-      pesan += " Saya sudah bayar via QR dan melampirkan bukti pembayaran.";
-      
-      // Buka halaman perantara untuk mengirim gambar
-      const encodedPesan = encodeURIComponent(pesan);
-      window.open(`send-image.html?pesan=${encodedPesan}`, "_blank");
-    };
-    reader.readAsDataURL(bukti);
+
+    pesan += " Saya akan membayar secara Qris.";
   } else {
     pesan += " Saya akan membayar secara cash.";
   }
