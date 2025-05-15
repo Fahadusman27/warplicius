@@ -3,15 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Toko Cheese Roll & Kebab</title>
   <link rel="stylesheet" href="style.css" />
+  <title>Toko Cheese Roll & Kebab</title>
 </head>
 <body>
   <header>
     <h1>Toko Cheese Roll & Kebab</h1>
   </header>
 
-  <main class="container">
+  <section class="deskripsi-toko">
+    <h2>About WarpLicius</h2>
+      <p>
+        Selamat datang di Wraplicious!
+        Kami adalah toko online yang menghadirkan pengalaman kuliner praktis dan menggugah selera lewat sajian kebab full daging dan cheese roll kekinian yang siap bikin ketagihan.
+
+        Kebab Full Daging
+        Kami menggunakan 100% daging pilihan yang dibungkus hangat dalam balutan roti kebab lembut.
+        Tersedia dua varian rasa yang bisa kamu pilih sesuai selera:
+
+        Original (tidak pedas) – untuk kamu yang suka rasa gurih dan lembut
+
+        Spicy (pedas) – cocok buat pencinta sensasi pedas mantap
+
+        Cheese Roll 3 Rasa, 3 Topping
+        Lembutnya cheese roll berpadu dengan isian creamy dalam tiga varian rasa spesial:
+
+        Matcha – pahit manisnya pas banget
+
+        Coklat – klasik dan selalu jadi favorit
+
+        Tiramisu – elegan dengan cita rasa kopi manis
+
+        Ditambah dengan pilihan topping yang bikin tampilan makin menggoda:
+
+        Sprinkle warna-warni
+
+        Taburan keju parut
+
+        Oreo
+      </p>
+  </section>
+  
+  <div class="jam">
+    <h2>Jam Operasional Toko</h2>
+
+    <div class="menu">
+      <h3>Menu Kebab</h3>
+      <ul>
+        <li><span class="highlight">Senin - Jumat:</span> 05.00 - 07.30 & 17.00 - 21.00</li>
+        <li><span class="highlight">Sabtu - Minggu:</span> 07.00 - 21.00</li>
+      </ul>
+    </div>
+
+    <div class="menu">
+      <h3>Menu Cheese Roll</h3>
+      <ul>
+        <li><span class="highlight">Setiap Hari:</span> 06.00 - 21.00</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="Katalog">Katalog</h2>
+  <main id="menu" class="container">
     <!-- CHEESE ROLL -->
     <section class="CHEESE-ROLL">
       <img src="Banana Roll Cheese Choco nd Greentea Oreo.png" alt="Cheese Roll" />
@@ -54,13 +107,10 @@
       <div id="pembayaran" class="hidden">
         <p><strong>Metode Pembayaran:</strong></p>
         <button onclick="pembayaran('cash')">Cash</button>
-        <button onclick="pembayaran('qr')">Scan QR Dana</button>
+        <button onclick="pembayaran('qr')">Scan QR</button>
       </div>
 
       <div id="qr-section" class="hidden">
-        <p>Silakan scan QR dan upload bukti:</p>
-        <img src="dana.jpg" alt="QR Code" style="max-width:200px" />
-        <input type="file" id="buktiBayar" accept="image/*" />
         <button onclick="kirimWA(true)">Kirim ke WhatsApp</button>
       </div>
 
